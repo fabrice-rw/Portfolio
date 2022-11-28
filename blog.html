@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/img/logo2.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="index.css">
+        <title>Blog</title>
+    </head>
+
+    <body class="container full-height-grow">
+        <header class="main-header">
+            <a href="Home.html" class="brand-logo">
+                <div class="brand-logo-name"><span>ze</span>fab</div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="Home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li class="active"><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="blog">
+            <div class="blog-heading">
+                <h3>Blog</h3>
+                <span>Recent Posts</span>
+            </div>
+            <div class="blog-container">
+                <div class="blog-box">
+                    <div class="blog-img">
+                        <img src="/img/calculator.gif" alt="calculator">
+                    </div>
+                    <div class="blog-text">
+                        <span>18 December / Design</span>
+                        <a href="#" class="blog-title">Designing Calulator using HTML, CSS & JS</a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Laboriosam incidunt?</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+
+                
+                <div class="blog-box">
+                    <div class="blog-img">
+                        <img src="/img/MAP.png" alt="calculator">
+                    </div>
+                    <div class="blog-text">
+                        <span>18 December / Design</span>
+                        <a href="#" class="blog-title">Designing Calulator using HTML, CSS &
+                            JS</a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Laboriosam incidunt?</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+
+
+                <div class="blog-box">
+                    <div class="blog-img">
+                        <img src="/img/tictactoe.png" alt="calculator">
+                    </div>
+                    <div class="blog-text">
+                        <span>18 December / Design</span>
+                        <a href="#" class="blog-title">Designing Calulator using HTML, CSS &
+                            JS</a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Laboriosam incidunt?</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            let links = document.getElementsByTagName('li');
+            for (const lnk of links) {
+                var current = document.getElementsByClassName('active');
+                lnk.addEventListener('click', () => {
+                    current[0].className = current[0].className.replace('active', "");
+                    lnk.classList.add('active');
+                });
+            }
+        </script>
+    </body>
+
+</html>

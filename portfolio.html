@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/img/logo2.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="index.css">
+        <title>Blog</title>
+    </head>
+
+    <body class="container full-height-grow">
+        <header class="main-header">
+            <a href="Home.html" class="brand-logo">
+                <div class="brand-logo-name"><span>ze</span>fab</div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="Home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="active"><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="port">
+            <div class="port-heading">
+                <h3>My projects</h3>
+            </div>
+            <div class="port-container">
+                <div class="port-box">
+                    <div class="port-text">
+                        <a href="#" class="port-title">Hex Color Application</a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Laboriosam incidunt?</p>
+                        <a href="#" class="git-sourcecode">Github sourcecode</a>
+                    </div>
+                </div>
+
+
+                <div class="port-box">
+                    <div class="port-text">
+                        <a href="#" class="port-title">Vanilla JavaScript stopwatch</a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Laboriosam incidunt?</p>
+                        <a href="#" class="git-sourcecode">Github sourcecode</a>
+                    </div>
+                </div>
+
+
+                <div class="port-box">
+                    <div class="port-text">
+                        <a href="#" class="port-title">BMI Calculator</a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Laboriosam incidunt?</p>
+                        <a href="#" class="git-sourcecode">Github sourcecode</a>
+                    </div>
+                </div>
+                <div class="port-box">
+                    <div class="port-text">
+                        <a href="#" class="port-title">Random Quote Generator</a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Laboriosam incidunt?</p>
+                        <a href="#" class="git-sourcecode">Github sourcecode</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            let links = document.getElementsByTagName('li');
+            for (const lnk of links) {
+                var current = document.getElementsByClassName('active');
+                lnk.addEventListener('click', () => {
+                    current[0].className = current[0].className.replace('active', "");
+                    lnk.classList.add('active');
+                });
+            }
+        </script>
+    </body>
+
+</html>
