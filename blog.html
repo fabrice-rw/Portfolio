@@ -77,16 +77,6 @@
                 </div>
             </div>
         </section>
-        <script>
-            let links = document.getElementsByTagName('li');
-            for (const lnk of links) {
-                var current = document.getElementsByClassName('active');
-                lnk.addEventListener('click', () => {
-                    current[0].className = current[0].className.replace('active', "");
-                    lnk.classList.add('active');
-                });
-            }
-        </script>
     </body>
 
 </html>

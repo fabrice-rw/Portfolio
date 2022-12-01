@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/logo2.png">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"
+        crossorigin="anonymous"></script>
     <title>Home</title>
 </head>
 <body class="container full-height-grow">
@@ -23,6 +24,9 @@
                 <li><a href="contact.html">CONTACT</a></li>
                 <li><a href="login.html">LOGIN</a></li>
             </ul>
+        <!-- <label id="icon">
+            <i class="fas fa-bars fa-lg"></i>
+        </label> -->
         </nav>
     </header>
     <section class="home-main-section">
@@ -31,21 +35,11 @@
         </div>
         <div class="call-to-action">
             <span class="subtitle">HI THERE!</span>
-            <h1 class="title">I am Fabrice.</h1>
+            <h1 class="title">I am <span>Fab</span>rice.</h1>
             <span class="subtitle">I am a Software Developer, UI Designer & 
                 IT Support Specialist</span>
             <a download="" href="/Resume/[UP] Resume.pdf" class="btn">Download Resume</a>
         </div>
     </section>
-    <script>
-        let links = document.getElementsByTagName('li');
-        for (const lnk of links) {
-                var current = document.getElementsByClassName('active');
-                lnk.addEventListener('click', () => {
-                    current[0].className = current[0].className.replace('active', "");
-                    lnk.classList.add('active');
-                });
-            }
-    </script>
 </body>
 </html>
