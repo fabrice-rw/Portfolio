@@ -1,16 +1,4 @@
 
-// const addPost = document.getElementById('add-post');
-// const postContainer = document.getElementById('post-container');
-// const inputPost = document.getElementById('form');
-
-// //Event Listener for add button
-
-// addPost.addEventListener('click', function () {
-    
-
-    
-// })
-
 var form = `<div>
   <div class="form-group">
     <label for="blog">Post title</label>
