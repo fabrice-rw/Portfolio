@@ -15,7 +15,7 @@ var form = `<div>
     <textarea rows="4" cols="50"
      class="form-control" id="content" placeholder="blog content"></textarea>
   </div>
-  <button type="submit" class="btn btn-success mt-3" onclick="save()">Save</button>
+  <button type="submit" class="btn btn-success mt-3" onclick="save()">Publish Post</button>
 </div>`;
 
 function table() {
