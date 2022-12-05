@@ -1,0 +1,246 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: rgb(31, 23, 23);
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+  .header_title{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+  }
+  a{
+    text-decoration: none;
+    padding: 20px 20px 20px 0px;
+    color: #ddd;
+  }
+.container > h1 {
+    text-align: center;
+}
+  input[type=text],input[type=password],input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #C69749;
+    color: rgb(255, 254, 254);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+    margin-right: 140px;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #c68319;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #9b9292;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 15%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas:
+      'header'
+      'main'
+      'footer';
+    height: 100vh;
+  }
+  .menu-icon {
+    position: fixed; 
+    display: flex;
+    top: 5px;
+    left: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #DADAE3;
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+    padding: 12px;
+  }
+  
+  
+  .header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: #735F32;
+  }
+  
+  
+  .header__avatar {
+    margin-left: 90%;
+    color: white;
+  }
+  .sidenav {
+    grid-area: sidenav;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    overflow-y: auto;
+    transform: translateX(-245px);
+    transition: all .6s ease-in-out;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    z-index: 2; 
+    background-color: #282A3A;
+  }
+  
+  .sidenav.active {
+    transform: translateX(0);
+  }
+  
+  .sidenav__close-icon {
+    position: absolute;
+    visibility: visible;
+    top: 8px;
+    right: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ddd;
+  }
+  
+  .sidenav__list {
+    padding: 0;
+    margin-top: 85px;
+    list-style-type: none;
+  }
+  
+  .sidenav__list-item{
+    padding: 20px 20px 20px 40px;
+    color: #ddd;
+  }
+  
+  .sidenav__list-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
+  
+  
+  
+  .footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: #648ca6;
+  }
+  
+  
+  @media only screen and (min-width: 46.875em) {
+  
+    .grid-container {
+      grid-template-columns: 240px 1fr;
+      grid-template-areas:
+        "sidenav header"
+        "sidenav main"
+        "sidenav footer";
+    }
+  
+    .sidenav {
+      position: relative;
+      transform: translateX(0);
+    }
+  
+    .sidenav__close-icon {
+      visibility: hidden;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+
+
+
+  /* --------------------------------------------------------------- */
+
+    #form {
+      margin: 2% 5%;
+    }
+  
+    .test {
+      height: 100%;
+      width: 100%;
+      background-color: wheat;
+    }
+  
+    .do {
+      height: 100%;
+      width: 100%;
+      background-color: aqua;
+    }
+  
+    .header h1 {
+      margin-left: 4%;
+      margin-top: 2rem;
+      color: white;
+      border: 1px solid;
+      padding: 15px;
+      border-radius: 10px;
+    }
+  
+    .blogs {
+      height: 190%;
+      width: 100%;
+      max-height: fit-content;
+      background-color: white;
+    }
+/*   
+    .tab {
+      margin-left: 15rem;
+      height: 10%;
+      width: 80%;
+      border: 2px solid black;
+  
+    }
+   */
+    /* .info {
+      margin-left: 9rem;
+    } */

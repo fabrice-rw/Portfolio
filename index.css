@@ -39,10 +39,10 @@ body {
     color: #C69749;
 }
 
-/* label #icon {
+label #icon {
     color: white;
     font-size: 30px;
-} */
+}
 
 .main-nav ul {
     display: flex;

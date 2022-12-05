@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Add User</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/logo2.png">
+<link  rel="stylesheet" href="./css/add.css">
+
+</head>
+<body>
+<div class="grid-container">
+   <div class="menu-icon">
+    <i class="fas fa-bars header__menu"></i>
+  </div>
+   
+  <header class="header">
+    <div class="header__avatar">Admin</div>
+  </header>
+
+  <aside class="sidenav">
+    <div class="sidenav__close-icon">
+      <i class="fas fa-times sidenav__brand-close"></i>
+    </div>
+    <ul class="sidenav__list">
+      <h1 class="header_title">Add user</h1>
+      <li class="sidenav__list-item"><a href="index.html">Manage Posts</a></li>
+      <li class="sidenav__list-item"><a href="manage_users.html">Manage Users</a></li>
+      <!-- <li class="sidenav__list-item"><a href="manage_topics.html">Manage Topics</a></li> -->
+    </ul>
+  </aside>
+
+  <div class="container">
+      <h1>Add User</h1>
+    <form action="./manage_users.html">
+    <div class="row">
+      <div class="col-25">
+        <label for="user_name">User Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="user_name" name="user_name" placeholder="User Name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="role">Role</label>
+      </div>
+      <div class="col-75">
+        <select id="role" name="role">
+          <option value="admin">Admin</option>
+          <option value="user">User</option>
+          <option value="guest">Guest</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="email" id="email" name="email" placeholder="Enter Your Email Here...">
+      </div>
+    </div>    
+    <div class="row">
+      <div class="col-25">
+        <label for="password">Password</label>
+      </div>
+      <div class="col-75">
+        <input type="password" id="password" name="password" placeholder="Enter Your Password Here...">
+      </div>
+    </div>     
+    <div class="row">
+      <div class="col-25">
+        <label for="passwordc">Confirm Password</label>
+      </div>
+      <div class="col-75">
+        <input type="password" id="passwordc" name="passwordc" placeholder="Reenter Your Password Here...">
+      </div>
+    </div>        
+    <div class="row">
+      <input type="submit" value="Add User">
+    </div>
+    </form>
+  </div>
+</body>
+</html>
