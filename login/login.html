@@ -7,46 +7,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/img/logo2.png">
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="index.css">
-        <!-- <script defer src="/js/login.js"></script> -->
+        <link rel="stylesheet" href="/index.css">
         <title>login</title>
     </head>
 
     <body class="container full-height-grow">
         <header class="main-header">
-            <a href="index.html" class="brand-logo">
+            <a href="/index.html" class="brand-logo">
                 <div class="brand-logo-name"><span>ze</span>fab</div>
             </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="portfolio.html">PORTFOLIO</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li class="active"><a href="login.html">LOGIN</a></li>
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="/about.html">ABOUT</a></li>
+                    <li><a href="/portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="/contact.html">BLOG</a></li>
+                    <li><a href="/contact.html">CONTACT</a></li>
+                    <li class="active"><a href="/login/login.html">LOGIN</a></li>
                 </ul>
             </nav>
         </header>
         <div class="center">
             <h1>Login</h1>
-            <form action="./admin-panel/manage_users.html" class="loginForm">
+            <form action="/admin-panel/index.html" class="loginForm">
                 <div class="text_field">
-                    <input type="username" required>
+                    <input type="username" id="username" required>
                     <span></span>
                     <label>Username</label>
                 </div>
                 <div class="text_field">
-                    <input type="password" required>
+                    <input type="password" id="psw" required>
                     <span></span>
                     <label>Password</label>
                 </div>
                 <div class="pass">Forgot Password?</div>
                 <input type="submit" value="Login">
                 <div class="signup_link">
-                    Not a member? <a href="#">Signup</a>
+                    Not a member? <a href="./signup.html">Signup</a>
                 </div>
             </form>
         </div>
     </body>
+<script src="/login/login.js"></script>
 </html>
