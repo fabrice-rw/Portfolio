@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Single post</title>
+    </head>
+
+    <body>
+<div class="singlePost"></div>
+        <script>
+            let postContainer = document.querySelector('.singlePost')
+            if (localStorage.getItem('details') != null) {
+                var blogs = JSON.parse(localStorage.getItem('details'));
+            } else {
+                var blogs = [];
+            }
+            let urlString = window.location.href;
+            let paramString = urlString.split('?')[1];
+            let queryString = new URLSearchParams(paramString);
+            for (let pair of queryString.entries()) {
+                var post_id = pair[1];
+            }
+            let post = blogs[Number(post_id)];
+            postContainer.innerHTML = `
+                <h1>${post.blog}</h1>
+            `;
+        </script>
+    </body>
+
+</html>

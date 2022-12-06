@@ -32,51 +32,29 @@
                 <h3>Blog</h3>
                 <span>Recent Posts</span>
             </div>
-            <!-- <div class="blog-container">
-                <div class="blog-box">
-                    <div class="blog-img">
-                        <img src="/img/calculator.gif" alt="calculator">
-                    </div>
-                    <div class="blog-text">
-                        <span>18 December / Design</span>
-                        <a href="#" class="blog-title">Designing Calulator using HTML, CSS & JS</a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Laboriosam incidunt?</p>
-                        <a href="#">Read More</a>
-                    </div>
+            <div class="blog-container">
+                <div class="details">
+
                 </div>
 
-                
-                <div class="blog-box">
-                    <div class="blog-img">
-                        <img src="/img/MAP.png" alt="calculator">
-                    </div>
-                    <div class="blog-text">
-                        <span>18 December / Design</span>
-                        <a href="#" class="blog-title">Designing Calulator using HTML, CSS &
-                            JS</a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Laboriosam incidunt?</p>
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-
-
-                <div class="blog-box">
-                    <div class="blog-img">
-                        <img src="/img/tictactoe.png" alt="calculator">
-                    </div>
-                    <div class="blog-text">
-                        <span>18 December / Design</span>
-                        <a href="#" class="blog-title">Designing Calulator using HTML, CSS &
-                            JS</a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Laboriosam incidunt?</p>
-                        <a href="#">Read More</a>
-                    </div>
-                </div> -->
             </div>
         </section>
     </body>
-
+    <script src="/admin-panel/js/admin.js"></script>
+    <script>
+        let details = document.querySelector('.details');
+        if(localStorage.getItem('details') != null) {
+            var blogs = JSON.parse(localStorage.getItem('details'));
+        } else {
+            var blogs = [];
+        }
+        for (let i = 0; i<blogs.length; i++) {
+            let post = blogs[i];
+            details.innerHTML += `
+                <a href="single.html?post=${i}">${post.blog}</a>
+                <p>${post.content}</p>
+                ${post.image}
+            `;
+        }
+    </script>
 </html>
