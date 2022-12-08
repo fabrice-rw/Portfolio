@@ -6,10 +6,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Single post</title>
+        <link rel="stylesheet" href="/index.css">
+        <link rel="shortcut icon" href="../img/logo2.png">
     </head>
 
     <body>
-<div class="singlePost"></div>
+<div class="singlePost">
+    <div class="singlePost-container">
         <script>
             let postContainer = document.querySelector('.singlePost')
             if (localStorage.getItem('details') != null) {
@@ -26,8 +29,12 @@
             let post = blogs[Number(post_id)];
             postContainer.innerHTML = `
                 <h1>${post.blog}</h1>
+                <p>${post.content}</p>
+                ${post.image}
             `;
         </script>
+        </div>
+        </div>
     </body>
 
 </html>
