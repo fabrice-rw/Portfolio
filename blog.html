@@ -43,12 +43,12 @@
     <script src="/admin-panel/js/admin.js"></script>
     <script>
         let details = document.querySelector('.details');
-        if(localStorage.getItem('details') != null) {
+        if (localStorage.getItem('details') != null) {
             var blogs = JSON.parse(localStorage.getItem('details'));
         } else {
             var blogs = [];
         }
-        for (let i = 0; i<blogs.length; i++) {
+        for (let i = 0; i < blogs.length; i++) {
             let post = blogs[i];
             details.innerHTML += `
                 <a href="single.html?post=${i}">${post.blog}</a>
@@ -57,4 +57,5 @@
             `;
         }
     </script>
+
 </html>

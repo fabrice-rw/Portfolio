@@ -30,12 +30,28 @@
         <div class="contact-section">
             <h1>Contact Me</h1>
             <div class="border"></div>
-            <form class="contact-form" action=""></form>
-            <input type="text" class="contact-form-text" placeholder="Your name">
-            <input type="email" class="contact-form-text" placeholder="Your email">
-            <input type="text" class="contact-form-text" placeholder="Your phone">
-            <textarea class="contact-form-text" placeholder="Your message"></textarea>
+            <form class="contact-form" id="contact"></form>
+            <input type="text" class="contact-form-text" placeholder="Your name" name="name">
+            <input type="email" class="contact-form-text" placeholder="Your email" name="email">
+            <input type="text" class="contact-form-text" placeholder="Your phone" name="phone">
+            <textarea class="contact-form-text" placeholder="Your message" name="message"></textarea>
             <input type="submit" class="contact-form-btn" value="Send">
         </div>
     </body>
 </html>
+
+<script>
+    const contactForm = document.querySelector('#contact');
+    contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = contactForm.name.value;
+            const phone = contactForm.phone.value;
+            const email = contactForm.email.value;
+            const UserMessage = contactForm.message.value;
+            const request = await fetch('https://swagger-ui-production.up.railway.app/sendMessage', {
+            method: "POST",
+            body: JSON.stringify({ name, email, UserMessage }),
+            headers: { 'Content-Type': 'application/json' }
+        });
+    });
+</script>
