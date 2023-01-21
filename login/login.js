@@ -59,7 +59,7 @@ async function login() {
     }
     if (await response.userID == adminID) {
         setCookie('token', response.jwt, 3);
-        window.location.href = "../admin-panel/admin.html";
+        window.location.href = "../admin-panel/index.html";
     }
     else {
         setCookie('token', response.jwt, 3);
