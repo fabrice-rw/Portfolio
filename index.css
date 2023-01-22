@@ -6,7 +6,8 @@
     box-sizing: border-box;
 }
 
-body, .singlePost {
+body,
+.singlePost {
     padding: 0;
     margin: 0;
     background-color: black;
@@ -114,6 +115,7 @@ label #icon {
     background-color: rgb(255, 254, 254);
     cursor: pointer;
 }
+
 .home-main-section {
     display: flex;
     align-items: stretch;
@@ -157,7 +159,7 @@ label #icon {
     }
 
     .call-to-action .title {
-    font-size: 1.5em;
+        font-size: 1.5em;
     }
 }
 
@@ -167,11 +169,13 @@ label #icon {
     padding: 78px 0px;
 }
 
-.about img, .singlePost {
+.about img,
+.singlePost {
     height: auto;
     width: 420px;
     border-radius: 15px;
 }
+
 .about-text {
     width: 550px;
 }
@@ -186,18 +190,21 @@ label #icon {
     align-items: center;
     justify-content: space-around;
 }
+
 .about-text .h1 {
     color: white;
     font-size: 80px;
     font-weight: 500;
     margin-bottom: 20px;
 }
-.about-text p{
+
+.about-text p {
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 18px;
     margin-bottom: 45px;
 }
+
 button .btn {
     font-family: 'Poppins';
     background-color: #735F32;
@@ -206,6 +213,7 @@ button .btn {
     font-size: 1.5rem;
     transition: .2s;
 }
+
 /* END About Section */
 
 /* Login */
@@ -219,20 +227,24 @@ button .btn {
     color: black;
     /* border-radius: 10px; */
 }
+
 .center h1 {
     text-align: center;
     padding: 0 0 20px 0;
     border-bottom: 1px solid silver;
 }
+
 .center form {
     padding: 0 40px;
     box-sizing: border-box;
 }
+
 form .text_field {
     position: relative;
     border-bottom: 2px solid #adadad;
     margin: 30px 0;
 }
+
 .text_field input {
     width: 100%;
     padding: 0 5px;
@@ -242,6 +254,7 @@ form .text_field {
     background: none;
     outline: none;
 }
+
 .text_field label {
     position: absolute;
     top: 50%;
@@ -252,6 +265,7 @@ form .text_field {
     pointer-events: none;
     transition: .5s;
 }
+
 .text_field span::before {
     content: '';
     position: absolute;
@@ -262,23 +276,28 @@ form .text_field {
     background: #C69749;
     transition: .5s;
 }
-.text_field input:focus ~ label,
-.text_field input:valid ~ label{
+
+.text_field input:focus~label,
+.text_field input:valid~label {
     top: -5px;
     color: #C69749;
 }
-.text_field input:focus ~ span::before,
-.text_field input:valid ~ span::before {
+
+.text_field input:focus~span::before,
+.text_field input:valid~span::before {
     width: 100%;
 }
+
 .pass {
     margin: -5px 0 20px 5px;
     color: #a6a6a6;
     cursor: pointer;
 }
+
 .pass:hover {
     text-decoration: underline;
 }
+
 input[type="submit"] {
     width: 100%;
     height: 50px;
@@ -291,48 +310,57 @@ input[type="submit"] {
     cursor: pointer;
     outline: none;
 }
-input[type="submit"]:hover{
+
+input[type="submit"]:hover {
     background: white;
     color: black;
     border-color: black;
     transition: .5s;
 }
-.signup_link{
+
+.signup_link {
     margin: 30px 0;
     text-align: center;
     font-size: 16px;
     color: #666666;
 }
-.signup_link a{
+
+.signup_link a {
     color: #2691d9;
     text-decoration: none;
 }
-.signup_link a:hover{
+
+.signup_link a:hover {
     text-decoration: underline;
 }
+
 /* End Login */
 
 /* Contact */
-.contact-section{
+.contact-section {
     background-size: cover;
     padding: 40px;
 }
-.contact-section h1{
+
+.contact-section h1 {
     text-align: center;
     color: #ddd;
 }
-.border{
+
+.border {
     width: 100px;
     height: 10px;
     background: #282A3A;
     margin: 40px auto;
 }
+
 .contact-form {
     max-width: 600px;
     margin: auto;
     padding: 0 10px;
     overflow: hidden;
 }
+
 .contact-form-text {
     display: block;
     width: 100%;
@@ -345,47 +373,57 @@ input[type="submit"]:hover{
     color: #ddd;
     transition: 0.5s;
 }
+
 textarea.contact-form-text {
     resize: none;
     height: 120px;
 }
-.contact-form-btn{
+
+.contact-form-btn {
     float: right;
     border: 0;
     background: #735F32;
     color: #ddd;
     transition: .5s;
 }
-.contact-form-btn:hover{
+
+.contact-form-btn:hover {
     background: white;
     color: black;
 }
+
 /* End Contact */
 
 
 
 /* blog section */
 
-#blog, .details {
+#blog,
+.details {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     padding: 40px;
 }
+
 .blog-heading {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.blog-heading span, .details a {
+
+.blog-heading span,
+.details a {
     text-decoration: none;
     color: #C69749;
 }
+
 .blog-heading h3 {
     font-size: 2.4rem;
     font-weight: 600;
 }
+
 .blog-container {
     display: flex;
     justify-content: center;
@@ -394,57 +432,70 @@ textarea.contact-form-text {
     width: 100%;
     /* flex-wrap: wrap; */
 }
+
 .blog-box {
     width: 350px;
     background-color: #282A3A;
     border: 1px solid #ececec;
     margin: 20px;
 }
-.blog-img, .details img {
+
+.blog-img,
+.details img {
     width: 100%;
     height: auto;
 }
+
 .blog-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
+
 .blog-text {
     padding: 30px;
     display: flex;
     flex-direction: column;
 }
+
 .blog-text span {
     color: #735F32;
     font-size: 0.9;
 }
+
 .blog-text .blog-title {
     font-size: 1.3rem;
     font-weight: 500;
     color: #d1d1d1;
 }
-.blog-text .blog-title:hover{
+
+.blog-text .blog-title:hover {
     color: #C69749;
     transition: all ease 0.3s;
 }
+
 .blog-text p {
     color: #9b9b9b;
     font-size: 0.9rem;
 }
+
 .blog-text a {
     color: #fffefec6;
 }
-.blog-text a:hover{
+
+.blog-text a:hover {
     color: #C69749;
     transition: all ease .3s;
-} 
+}
+
 @media screen and (max-width: 768px) {
-    .blog-container{
+    .blog-container {
         flex-direction: column;
         flex-wrap: wrap;
     }
 }
+
 /* End blog section */
 
 
@@ -472,7 +523,8 @@ textarea.contact-form-text {
     flex-wrap: wrap;
 }
 
-.port-box, .singlePost {
+.port-box,
+.singlePost {
     padding: 2.5rem;
     width: 350px;
     background-color: #282A3A;
@@ -509,9 +561,11 @@ textarea.contact-form-text {
     color: #C69749;
     transition: all ease .3s;
 }
+
 .port-text .git-sourcecode {
     font-size: .9rem;
 }
+
 /* End portfolio */
 
 

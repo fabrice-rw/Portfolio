@@ -52,54 +52,25 @@ async function login() {
     });
     const response = await request.json();
     console.log(await response);
-    const adminID = '63ca5ef9efa2e61bc7adaf97';
+    // const adminID = '63ca5ef9efa2e61bc7adaf97';
     if (await response.errors) {
         loginForm.innerHTML = response.errors.message || response.errors.email || response.errors.password;
         return;
     }
-    if (await response.userID == adminID) {
+    if (await response.userID == response.adminID) {
         setCookie('token', response.jwt, 3);
+        alert("Admin Successfully logged in")
         window.location.href = "../admin-panel/index.html";
     }
     else {
         setCookie('token', response.jwt, 3);
+        alert("User Logged in Successfully")
         window.location.href = "../blog.html";
 
     }
-    // .then(response => response.json())
-    // .then(data => {
-    //     const adminID = '63ca5ef9efa2e61bc7adaf97'
-    //     // console.log(data.token);
-
-    //     if (data.errors) {
-    //         loginForm.innerHTML = data.errors.message || data.errors.email || data.errors.password;
-    //         return;
-    //     }
-    //     if (data.userID == adminID) {
-    //         setCookie('token', data.token, 3);
-    //         window.location.href = "../admin-panel/admin.html";
-    //     }
-    //     else {
-    //         setCookie('token', data.token, 3);
-    //         // window.location.href = "/blog.html";
-
-    //     }
-    //     const response =await  request.json();
-    //     if ( response.statusCode == 200) {
-    //         alert(response.message);
-    //     } else {
-    //         console.log(response.message);
-    //     }
-    // })
-    // .catch(error => console.log(error));
 }
 
 loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     login();
 });
-
-// function signin(e) {
-//     e.preventDefault();
-//     login();
-// }

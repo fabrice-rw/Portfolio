@@ -1,40 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Manage Posts</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link rel="shortcut icon" href="../img/logo2.png">
-<link rel="stylesheet" href="./css/style.css">
-<script defer src="/admin-panel/js/admin.js"></script>
+<html lang="en">
 
-</head>
-<body>
-<div class="grid-container">
-   <div class="menu-icon">
-    <i class="fas fa-bars header__menu"></i>
-  </div>
-   
-  <header class="header">
-    <button class="btn"><a href="add_post.html">Add Posts</a></button>
-    <button class="btn"><a href="../login/login.html">Logout</a></button>
-    <div class="header__avatar">Admin</div>
-  </header>
-  <aside class="sidenav">
-    <div class="sidenav__close-icon">
-      <i class="fas fa-times sidenav__brand-close"></i>
+  <head>
+    <meta charset="UTF-8">
+    <title>Manage Posts</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300"
+      rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet">
+    <link rel="shortcut icon" href="../img/logo2.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="/admin-panel/js/admin.js"></script>
+
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <div class="menu-icon">
+        <i class="fas fa-bars header__menu"></i>
+      </div>
+
+      <header class="header">
+        <button class="btn"><a href="add_post.html">Add Posts</a></button>
+        <button class="btn" id="logout"><a
+            href="/index.html">Logout</a></button>
+        <div class="header__avatar">Admin</div>
+      </header>
+      <aside class="sidenav">
+        <div class="sidenav__close-icon">
+          <i class="fas fa-times sidenav__brand-close"></i>
+        </div>
+        <ul class="sidenav__list">
+          <h1 class="header_title">Manage Post</h1>
+          <li class="sidenav__list-item"><a href="index.html">Manage Posts</a>
+          </li>
+          <li class="sidenav__list-item"><a href="manage_users.html">Manage
+              Users</a></li>
+          <!-- <li class="sidenav__list-item"><a href="manage_topics.html">Manage Topics</a></li> -->
+        </ul>
+      </aside>
+      <div class="messages">
+        
+      </div>
     </div>
-    <ul class="sidenav__list">
-      <h1 class="header_title">Manage Post</h1>
-      <li class="sidenav__list-item"><a href="index.html">Manage Posts</a></li>
-      <li class="sidenav__list-item"><a href="manage_users.html">Manage Users</a></li>
-      <!-- <li class="sidenav__list-item"><a href="manage_topics.html">Manage Topics</a></li> -->
-    </ul>
-  </aside>
-  </div>
-</div>
 
-</body>
+  </body>
+
 </html>
+<script>
+  const logoutBtn = document.querySelector("#logout")
+  async function logout() {
+    const request = await fetch('https://swagger-ui-production.up.railway.app/logout', {
+      method: 'POST',
+      body: JSON.stringify(),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      
+    });
+    alert("You are logged out successfully");
+    window.location.href = "/";
+  }
+  logoutBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    logout();
+  })
+</script>
