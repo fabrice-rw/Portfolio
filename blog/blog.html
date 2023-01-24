@@ -6,24 +6,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/img/logo2.png">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="/index.css">
         <title>Blog</title>
     </head>
 
     <body class="container full-height-grow">
         <header class="main-header">
-            <a href="index.html" class="brand-logo">
+            <a href="/index.html" class="brand-logo">
                 <div class="brand-logo-name"><span>ze</span>fab</div>
             </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="/about.html">ABOUT</a></li>
+                    <li><a href="/portfolio.html">PORTFOLIO</a></li>
                     <li class="active"><a href="blog.html">BLOG</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="/login/login.html">LOGIN</a></li>
+                    <li><a href="/contact.html">CONTACT</a></li>
+                    <li><a onclick="signout()" id="login_logout"></li>
                 </ul>
             </nav>
         </header>
@@ -40,6 +39,11 @@
             </div>
         </section>
     </body>
+    <script src="/blog/blog.js"></script>
+    <script src="/index.js"></script>
+
+
+
     <script src="/admin-panel/js/admin.js"></script>
     <script>
         let details = document.querySelector('.details');
@@ -51,7 +55,7 @@
         for (let i = 0; i < blogs.length; i++) {
             let post = blogs[i];
             details.innerHTML += `
-                <a href="single.html?post=${i}">${post.blog}</a>
+                <a href="/single.html?post=${i}">${post.blog}</a>
                 <p>${post.content}</p>
                 <br>
             `;

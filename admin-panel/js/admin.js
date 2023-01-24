@@ -51,7 +51,20 @@ details = [];
 getData();
 table();
 function getData() {
-    let Data = localStorage.getItem("details");
+  // localStorage.getItem("details");
+  let Data = 
+  (async () => {
+
+    blogDataFromDB2 = await fetch('https://swagger-ui-production.up.railway.app/Blogs', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    });
+
+    blogDataFromDB2 = await blogDataFromDB2.json();
+    console.log('The published blogs are: ', blogDataFromDB2.data);
+  })();
     if (Data) {
         details = JSON.parse(Data);
     } else {
@@ -124,3 +137,4 @@ function update(index) {
     document.getElementById("form").innerHTML = form;
 
 }
+

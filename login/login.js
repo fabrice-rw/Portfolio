@@ -65,7 +65,7 @@ async function login() {
     else {
         setCookie('token', response.jwt, 3);
         alert("User Logged in Successfully")
-        window.location.href = "../blog.html";
+        window.location.href = "../blog/blog.html";
 
     }
 }
